@@ -39,4 +39,7 @@ function appendMessage(msg, type) {
     messageArea.appendChild(mainDiv)
 }
 
-
+// Recieve messages 
+socket.on('message', (msg) => {
+    appendMessage(msg, 'incoming')
+})
